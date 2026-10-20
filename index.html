@@ -1,0 +1,1797 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GEO SEAFOOD SL.SARL | Produits de la mer frais</title>
+  <meta name="description" content="GEO SEAFOOD SL.SARL, fournisseur de produits de la mer frais issus de la pêche au Sénégal. Poissons, poulpes, calamars, crevettes et crustacés frais à Mbour.">
+  <meta name="theme-color" content="#062b43">
+
+  <style>
+    :root {
+      --navy: #062b43;
+      --blue: #087da5;
+      --cyan: #18b7ca;
+      --gold: #f3b64b;
+      --white: #ffffff;
+      --light: #f2f7fa;
+      --text: #263b49;
+      --muted: #657987;
+      --radius: 16px;
+      --shadow: 0 12px 32px rgba(4,36,56,.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: white;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 740px;
+      text-align: center;
+      margin: 0 auto 42px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      margin: 10px 0 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      color: var(--navy);
+      background: var(--gold);
+    }
+
+    .btn-primary:hover {
+      background: #ffd27c;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,.8);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    /* Barre supérieure */
+
+    .topbar {
+      background: #041e30;
+      color: #e8f5fa;
+      padding: 9px 0;
+      font-size: .82rem;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .topbar a:hover {
+      color: var(--gold);
+    }
+
+    /* Navigation */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      box-shadow: 0 3px 18px rgba(0,0,0,.06);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      color: var(--navy);
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .brand-name small {
+      display: block;
+      color: var(--blue);
+      font-size: .67rem;
+      letter-spacing: 1.5px;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-contact {
+      background: var(--navy);
+      color: white !important;
+      padding: 11px 16px;
+      border-radius: 7px;
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 9px 12px;
+      background: var(--navy);
+      color: white;
+      border: 0;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    /* Accueil */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(2,24,39,.93), rgba(2,35,53,.62)),
+        url("logo2.png") center / cover no-repeat,
+        var(--navy);
+    }
+
+    .hero-content {
+      max-width: 780px;
+      padding: 90px 0;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,.4);
+      background: rgba(255,255,255,.08);
+      border-radius: 50px;
+      font-size: .82rem;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      line-height: 1.06;
+      margin-bottom: 24px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 660px;
+      color: #e2edf2;
+      font-size: 1.08rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px;
+      margin-top: 45px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.25);
+    }
+
+    .hero-stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: 1.25rem;
+    }
+
+    .hero-stat span {
+      color: #d5e5ed;
+      font-size: .85rem;
+    }
+
+    /* Engagements */
+
+    .trust-strip {
+      background: var(--navy);
+      color: white;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      padding: 28px 0;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .trust-icon {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      background: rgba(24,183,202,.16);
+      border-radius: 12px;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: .95rem;
+    }
+
+    .trust-item span {
+      color: #c8d9e1;
+      font-size: .82rem;
+    }
+
+    /* Produits */
+
+    .product-tools {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: -12px 0 30px;
+    }
+
+    .filter-btn {
+      border: 1px solid #d5e2e9;
+      border-radius: 30px;
+      background: white;
+      color: var(--navy);
+      padding: 9px 17px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: .88rem;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: white;
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform .25s, box-shadow .25s;
+      border: 1px solid #edf1f4;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 38px rgba(4,36,56,.15);
+    }
+
+    .product-card[hidden] {
+      display: none;
+    }
+
+    .product-image {
+      height: 235px;
+      position: relative;
+      overflow: hidden;
+      background: #e5eef2;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.06);
+    }
+
+    .product-label {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      padding: 6px 11px;
+      border-radius: 30px;
+      background: white;
+      color: var(--navy);
+      font-size: .74rem;
+      font-weight: 800;
+    }
+
+    .product-info {
+      padding: 21px;
+    }
+
+    .product-info h3 {
+      color: var(--navy);
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: var(--muted);
+      font-size: .92rem;
+      margin-bottom: 17px;
+    }
+
+    .product-link {
+      display: inline-flex;
+      gap: 7px;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: .9rem;
+    }
+
+    .product-link:hover {
+      color: var(--navy);
+    }
+
+    .product-note {
+      margin-top: 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* À propos */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 440px;
+      position: relative;
+    }
+
+    .about-main-image {
+      width: 88%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-logo-box {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 175px;
+      height: 175px;
+      display: grid;
+      place-items: center;
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .about-copy h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      margin: 12px 0 20px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .about-points {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .about-points li {
+      display: flex;
+      gap: 10px;
+      font-weight: 700;
+    }
+
+    .check {
+      color: #07885c;
+      font-weight: 900;
+    }
+
+    .company-data {
+      margin-top: 24px;
+      padding: 18px;
+      background: #eef6f9;
+      border-left: 4px solid var(--cyan);
+      border-radius: 6px;
+      font-size: .9rem;
+    }
+
+    .company-data p {
+      margin: 4px 0;
+    }
+
+    /* Services */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #e5edf1;
+      border-radius: var(--radius);
+      padding: 30px 25px;
+      box-shadow: 0 7px 25px rgba(4,36,56,.05);
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #e5f6f8;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    /* Bandeau de contact */
+
+    .cta {
+      background:
+        linear-gradient(110deg, rgba(4,32,49,.97), rgba(5,87,119,.9)),
+        url("logo2.png") center / cover;
+      color: white;
+      padding: 65px 0;
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .cta h2 {
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      margin-bottom: 8px;
+    }
+
+    .cta p {
+      color: #d6e6ed;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: var(--navy);
+      color: white;
+      padding: 32px;
+      border-radius: var(--radius);
+    }
+
+    .contact-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-info > p {
+      color: #c7dce6;
+      margin-bottom: 28px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.1);
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .contact-item small {
+      display: block;
+      color: #b9d1dc;
+      margin-bottom: 3px;
+    }
+
+    .contact-item a:hover {
+      color: var(--gold);
+    }
+
+    .contact-form {
+      background: white;
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid #edf1f4;
+    }
+
+    .contact-form h3 {
+      color: var(--navy);
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .form-intro {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: .93rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .field {
+      margin-bottom: 17px;
+    }
+
+    .field label {
+      display: block;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: .88rem;
+      margin-bottom: 7px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #d6e1e7;
+      border-radius: 7px;
+      background: #fbfdfe;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(8,125,165,.1);
+    }
+
+    .field textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .form-status {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    /* Carte */
+
+    .map-wrap {
+      height: 360px;
+      background: #e5edf1;
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Pied de page */
+
+    .footer {
+      background: #031d2d;
+      color: #d5e2e9;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 38px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 17px;
+      color: white;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    .footer-brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      background: white;
+      border-radius: 8px;
+    }
+
+    .footer p {
+      color: #b9cbd5;
+      font-size: .9rem;
+    }
+
+    .footer h4 {
+      color: white;
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+      list-style: none;
+      font-size: .9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: .82rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #20c766;
+      color: white;
+      font-size: 1.8rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      transition: transform .2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* Adaptation aux écrans */
+
+    @media (max-width: 950px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        padding: 22px 5%;
+        background: white;
+        box-shadow: 0 15px 20px rgba(0,0,0,.1);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li a {
+        display: block;
+        padding: 13px 5px;
+      }
+
+      .nav-contact {
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-grid {
+        gap: 30px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 60px 0;
+      }
+
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: .88rem;
+      }
+
+      .brand-name small {
+        font-size: .57rem;
+      }
+
+      .hero {
+        min-height: 590px;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -.5px;
+      }
+
+      .hero-stats {
+        gap: 20px;
+      }
+
+      .trust-grid,
+      .products-grid,
+      .services-grid,
+      .about-grid,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 245px;
+      }
+
+      .about-visual {
+        min-height: 330px;
+      }
+
+      .about-main-image {
+        height: 310px;
+      }
+
+      .about-logo-box {
+        width: 125px;
+        height: 125px;
+        padding: 12px;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 24px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BARRE DE CONTACT -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📍 Mbour, route de Joal, Sénégal</span>
+      <span>
+        <a href="tel:+221772216774">+221 77 221 67 74</a>
+        &nbsp; | &nbsp;
+        <a href="mailto:fsarr305@gmail.com">fsarr305@gmail.com</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <header class="header">
+    <nav class="container nav" aria-label="Navigation principale">
+
+      <a class="brand" href="#accueil" aria-label="Geo Seafood, accueil">
+        <img src="logo.png" alt="Logo Geo Seafood">
+        <span class="brand-name">
+          GEO SEAFOOD
+          <small>LE GOÛT DE LA MER</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="navLinks">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#produits">Produits frais</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a class="nav-contact" href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ACCUEIL -->
+    <section class="hero" id="accueil">
+      <div class="container">
+        <div class="hero-content">
+
+          <span class="hero-tag">
+            GEO-SEAFOOD SERVICE PROVIDER
+          </span>
+
+          <h1>
+            La fraîcheur de la mer,<br>
+            <span>directement de la pêche</span>
+          </h1>
+
+          <p>
+            GEO SEAFOOD SL.SARL vous propose des produits de la mer
+            frais issus de la pêche : poissons, poulpes, calamars,
+            crevettes, crabes et autres espèces marines.
+            Notre priorité est de répondre à vos besoins en produits
+            frais selon les arrivages et les disponibilités.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#produits" class="btn btn-primary">
+              Découvrir nos produits →
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              Demander un devis
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>Produits frais</strong>
+              <span>Issus de la pêche</span>
+            </div>
+            <div class="hero-stat">
+              <strong>Poissons & fruits de mer</strong>
+              <span>Selon les arrivages</span>
+            </div>
+            <div class="hero-stat">
+              <strong>Mbour, Sénégal</strong>
+              <span>Notre implantation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENTS -->
+    <section class="trust-strip" aria-label="Nos engagements">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <div class="trust-icon">🌊</div>
+          <div>
+            <strong>Produits de la mer frais</strong>
+            <span>Approvisionnement selon la pêche</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🐟</div>
+          <div>
+            <strong>Fraîcheur recherchée</strong>
+            <span>Disponibilité selon les arrivages</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🤝</div>
+          <div>
+            <strong>Service professionnel</strong>
+            <span>Demandes et devis personnalisés</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CATALOGUE DES PRODUITS FRAIS -->
+    <section class="section section-light" id="produits">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Notre catalogue frais</span>
+          <h2>Nos produits de la mer frais</h2>
+          <p>
+            Nous nous concentrons sur les produits de la mer frais
+            issus de la pêche. Les espèces, les quantités et les
+            disponibilités peuvent varier selon les arrivages.
+            Contactez-nous pour connaître les produits disponibles.
+          </p>
+        </div>
+
+        <div class="product-tools" aria-label="Filtrer les produits">
+          <button class="filter-btn active" data-filter="all">Tous les produits</button>
+          <button class="filter-btn" data-filter="poissons">Poissons</button>
+          <button class="filter-btn" data-filter="crustaces">Crustacés</button>
+          <button class="filter-btn" data-filter="mollusques">Mollusques</button>
+          <button class="filter-btn" data-filter="coquillages">Coquillages</button>
+        </div>
+
+        <div class="products-grid">
+
+          <article class="product-card" data-category="poissons">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=900&q=85"
+                alt="Poissons frais"
+                loading="lazy">
+              <span class="product-label">Poisson frais</span>
+            </div>
+            <div class="product-info">
+              <h3>Poissons frais</h3>
+              <p>
+                Poissons pêchés, avec disponibilité à confirmer
+                selon les espèces et les arrivages.
+              </p>
+              <a class="product-link" href="#contact" data-product="Poissons frais">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="poissons">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=900&q=85"
+                alt="Poissons destinés à la vente fraîche"
+                loading="lazy">
+              <span class="product-label">Poisson frais</span>
+            </div>
+            <div class="product-info">
+              <h3>Thon et poissons pélagiques</h3>
+              <p>
+                Renseignez-vous sur les espèces, les volumes
+                et les disponibilités du jour.
+              </p>
+              <a class="product-link" href="#contact" data-product="Thon et poissons pélagiques">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="mollusques">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1545670723-196ed0954986?auto=format&fit=crop&w=900&q=85"
+                alt="Poulpe frais, illustration"
+                loading="lazy">
+              <span class="product-label">Mollusque frais</span>
+            </div>
+            <div class="product-info">
+              <h3>Poulpe frais</h3>
+              <p>
+                Poulpe issu de la pêche, selon les arrivages
+                et les quantités disponibles.
+              </p>
+              <a class="product-link" href="#contact" data-product="Poulpe frais">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="mollusques">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85"
+                alt="Calamars frais, illustration"
+                loading="lazy">
+              <span class="product-label">Mollusque frais</span>
+            </div>
+            <div class="product-info">
+              <h3>Calamars et encornets frais</h3>
+              <p>
+                Produits de la pêche destinés aux acheteurs
+                et aux professionnels de la restauration.
+              </p>
+              <a class="product-link" href="#contact" data-product="Calamars et encornets frais">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="crustaces">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=900&q=85"
+                alt="Crevettes, illustration"
+                loading="lazy">
+              <span class="product-label">Crustacé frais</span>
+            </div>
+            <div class="product-info">
+              <h3>Crevettes fraîches</h3>
+              <p>
+                Crevettes fraîches selon la pêche, la saison
+                et les arrivages disponibles.
+              </p>
+              <a class="product-link" href="#contact" data-product="Crevettes fraîches">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="crustaces">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=85"
+                alt="Crustacés, illustration"
+                loading="lazy">
+              <span class="product-label">Crustacé frais</span>
+            </div>
+            <div class="product-info">
+              <h3>Crabes frais</h3>
+              <p>
+                Crabes et autres crustacés selon les arrivages
+                et les disponibilités.
+              </p>
+              <a class="product-link" href="#contact" data-product="Crabes frais">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="crustaces">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=85"
+                alt="Crustacés marins, illustration"
+                loading="lazy">
+              <span class="product-label">Selon arrivage</span>
+            </div>
+            <div class="product-info">
+              <h3>Langoustes et homards frais</h3>
+              <p>
+                Disponibilité à vérifier selon la pêche,
+                les espèces et les commandes.
+              </p>
+              <a class="product-link" href="#contact" data-product="Langoustes et homards frais">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="coquillages">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=900&q=85"
+                alt="Produits marins, illustration"
+                loading="lazy">
+              <span class="product-label">Selon arrivage</span>
+            </div>
+            <div class="product-info">
+              <h3>Coquillages frais</h3>
+              <p>
+                Renseignez-vous sur les coquillages disponibles
+                et les conditions de vente.
+              </p>
+              <a class="product-link" href="#contact" data-product="Coquillages frais">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="mollusques">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=85"
+                alt="Fruits de mer, illustration"
+                loading="lazy">
+              <span class="product-label">Selon arrivage</span>
+            </div>
+            <div class="product-info">
+              <h3>Autres fruits de mer frais</h3>
+              <p>
+                Faites-nous part de vos besoins pour vérifier
+                les autres produits disponibles.
+              </p>
+              <a class="product-link" href="#contact" data-product="Autres fruits de mer frais">
+                Demander le prix →
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="product-note">
+          GEO SEAFOOD SL.SARL commercialise des produits de la mer frais
+          issus de la pêche. Les photographies sont illustratives.
+          Les espèces et quantités disponibles doivent être confirmées
+          auprès de l’entreprise.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="section" id="apropos">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <img
+            class="about-main-image"
+            src="https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1100&q=85"
+            alt="Produits de la mer, illustration"
+            loading="lazy">
+
+          <div class="about-logo-box">
+            <img src="logo.png" alt="Logo Geo Seafood">
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <span class="eyebrow">Qui sommes-nous ?</span>
+
+          <h2>La fraîcheur des produits issus de la pêche</h2>
+
+          <p>
+            GEO SEAFOOD SL.SARL est une entreprise située à Mbour,
+            au Sénégal, spécialisée dans les produits de la mer frais.
+          </p>
+
+          <p>
+            Notre activité est centrée sur les produits frais issus
+            de la pêche. Nous proposons aux clients de nous contacter
+            pour connaître les espèces disponibles, les volumes,
+            les prix et les possibilités de commande.
+          </p>
+
+          <ul class="about-points">
+            <li><span class="check">✓</span> Produits de la mer frais</li>
+            <li><span class="check">✓</span> Approvisionnement selon la pêche</li>
+            <li><span class="check">✓</span> Disponibilités selon les arrivages</li>
+            <li><span class="check">✓</span> Demandes de prix personnalisées</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">
+            Contacter notre équipe →
+          </a>
+
+          <div class="company-data">
+            <p><strong>Raison sociale :</strong> GEO SEAFOOD SL.SARL</p>
+            <p><strong>RC :</strong> SN-THS-2014-A-1265</p>
+            <p><strong>NINEA :</strong> 0044983871</p>
+            <p><strong>Adresse :</strong> Mbour, route de Joal, Sénégal</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section-light" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Nos services</span>
+          <h2>Votre partenaire en produits de la mer frais</h2>
+          <p>
+            Des échanges directs pour vos demandes de poissons
+            et de fruits de mer frais issus de la pêche.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon">🐟</div>
+            <h3>Poissons frais</h3>
+            <p>
+              Renseignez-vous sur les espèces de poissons frais
+              disponibles selon les sorties de pêche et les arrivages.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🦑</div>
+            <h3>Poulpes et calamars frais</h3>
+            <p>
+              Contactez-nous pour connaître les disponibilités,
+              les quantités et les prix des mollusques frais.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🦐</div>
+            <h3>Crustacés frais</h3>
+            <p>
+              Demandez les informations sur les crevettes, crabes
+              et autres crustacés disponibles.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📋</div>
+            <h3>Demandes de devis</h3>
+            <p>
+              Indiquez les espèces, les quantités et vos besoins
+              pour recevoir les informations commerciales nécessaires.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🤝</div>
+            <h3>Clients professionnels</h3>
+            <p>
+              Échangez avec nous au sujet de vos besoins de
+              poissonneries, commerces, restaurants et autres activités.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📞</div>
+            <h3>Contact commercial</h3>
+            <p>
+              Nous recevons vos demandes par téléphone, WhatsApp
+              ou e-mail pour vous renseigner sur les produits frais.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- APPEL À L'ACTION -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Vous recherchez du poisson frais ou des fruits de mer ?</h2>
+          <p>Contactez Geo Seafood pour vérifier les arrivages et les prix.</p>
+        </div>
+
+        <a class="btn btn-primary"
+          href="https://wa.me/221772216774?text=Bonjour%20Geo%20Seafood%2C%20je%20recherche%20des%20produits%20de%20la%20mer%20frais.">
+          Commander via WhatsApp →
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Contact commercial</span>
+          <h2>Demandez nos produits frais</h2>
+          <p>
+            Indiquez le produit recherché et la quantité souhaitée.
+            Nous pourrons échanger sur les arrivages, les prix
+            et les disponibilités.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <h3>Nos coordonnées</h3>
+            <p>
+              Contactez GEO SEAFOOD SL.SARL pour vos demandes
+              de produits de la mer frais.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <small>Adresse</small>
+                <strong>Mbour, route de Joal, Sénégal</strong>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <small>Téléphone principal</small>
+                <a href="tel:+221772216774">+221 77 221 67 74</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <small>Téléphone secondaire</small>
+                <a href="tel:+221779112931">+221 77 911 29 31</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <small>E-mail</small>
+                <a href="mailto:fsarr305@gmail.com">fsarr305@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">💬</div>
+              <div>
+                <small>WhatsApp</small>
+                <a href="https://wa.me/221772216774"
+                   target="_blank" rel="noopener">
+                  Envoyer un message
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <h3>Votre demande de produits frais</h3>
+            <p class="form-intro">
+              Complétez ce formulaire. WhatsApp s’ouvrira avec
+              votre demande prête à être envoyée.
+            </p>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Nom complet *</label>
+                <input id="name" name="name" type="text"
+                  placeholder="Votre nom" required>
+              </div>
+
+              <div class="field">
+                <label for="company">Entreprise</label>
+                <input id="company" name="company" type="text"
+                  placeholder="Nom de votre entreprise">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="email">Adresse e-mail *</label>
+                <input id="email" name="email" type="email"
+                  placeholder="nom@exemple.com" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Téléphone</label>
+                <input id="phone" name="phone" type="tel"
+                  placeholder="+221 ...">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="product">Produit frais recherché *</label>
+              <select id="product" name="product" required>
+                <option value="">Choisir un produit</option>
+                <option>Poissons frais</option>
+                <option>Thon et poissons pélagiques frais</option>
+                <option>Poulpe frais</option>
+                <option>Calamars et encornets frais</option>
+                <option>Crevettes fraîches</option>
+                <option>Crabes frais</option>
+                <option>Langoustes et homards frais</option>
+                <option>Coquillages frais</option>
+                <option>Autres fruits de mer frais</option>
+                <option>Autre produit frais</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="quantity">Quantité souhaitée</label>
+              <input id="quantity" name="quantity" type="text"
+                placeholder="Ex. : 100 kg, 500 kg, 1 tonne">
+            </div>
+
+            <div class="field">
+              <label for="destination">Lieu de livraison ou de réception</label>
+              <input id="destination" name="destination" type="text"
+                placeholder="Ville ou lieu souhaité">
+            </div>
+
+            <div class="field">
+              <label for="message">Votre message *</label>
+              <textarea id="message" name="message"
+                placeholder="Précisez votre demande, l'espèce recherchée et vos besoins..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Envoyer via WhatsApp →
+            </button>
+
+            <p class="form-status" id="formStatus" aria-live="polite">
+              Ce formulaire prépare un message WhatsApp.
+              Il ne transmet pas directement un e-mail.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTE -->
+    <section class="map-wrap" aria-label="Carte de Mbour">
+      <iframe
+        title="Localisation de Mbour, route de Joal, Sénégal"
+        src="https://maps.google.com/maps?q=Mbour%20route%20de%20Joal%20Senegal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-brand">
+            <img src="logo.png" alt="Logo Geo Seafood">
+            <span>GEO SEAFOOD SL.SARL</span>
+          </div>
+          <p>
+            Le goût de la mer. Des produits de la mer frais
+            issus de la pêche, à Mbour, au Sénégal.
+          </p>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#produits">Produits frais</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+221772216774">+221 77 221 67 74</a></li>
+            <li><a href="tel:+221779112931">+221 77 911 29 31</a></li>
+            <li><a href="mailto:fsarr305@gmail.com">fsarr305@gmail.com</a></li>
+            <li>Mbour, route de Joal, Sénégal</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>
+          © <span id="year"></span> GEO SEAFOOD SL.SARL.
+          Tous droits réservés.
+        </span>
+        <span>Le goût de la mer — produits frais de la pêche.</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BOUTON WHATSAPP FLOTTANT -->
+  <a class="whatsapp-float"
+    href="https://wa.me/221772216774?text=Bonjour%20Geo%20Seafood%2C%20je%20recherche%20des%20produits%20de%20la%20mer%20frais."
+    target="_blank"
+    rel="noopener"
+    aria-label="Contacter Geo Seafood sur WhatsApp"
+    title="WhatsApp">
+    ☎
+  </a>
+
+  <script>
+    // Année automatique
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Menu pour téléphone et tablette
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Filtrer les produits par catégorie
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const productCards = document.querySelectorAll(".product-card");
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        productCards.forEach(function (card) {
+          card.hidden =
+            filter !== "all" && card.dataset.category !== filter;
+        });
+      });
+    });
+
+    // Préremplir le produit choisi dans le formulaire
+    document.querySelectorAll("[data-product]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        const productSelect = document.getElementById("product");
+        const chosenProduct = link.dataset.product;
+
+        for (const option of productSelect.options) {
+          if (option.text === chosenProduct) {
+            productSelect.value = option.value;
+            break;
+          }
+        }
+      });
+    });
+
+    // Préparer une demande WhatsApp
+    document.getElementById("contactForm").addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault();
+
+        const name =
+          document.getElementById("name").value.trim();
+        const company =
+          document.getElementById("company").value.trim();
+        const email =
+          document.getElementById("email").value.trim();
+        const phone =
+          document.getElementById("phone").value.trim();
+        const product =
+          document.getElementById("product").value;
+        const quantity =
+          document.getElementById("quantity").value.trim();
+        const destination =
+          document.getElementById("destination").value.trim();
+        const message =
+          document.getElementById("message").value.trim();
+        const status =
+          document.getElementById("formStatus");
+
+        if (!name || !email || !product || !message) {
+          status.textContent =
+            "Veuillez remplir tous les champs obligatoires.";
+          return;
+        }
+
+        const whatsappMessage =
+          "Bonjour GEO SEAFOOD SL.SARL,\n\n" +
+          "Je souhaite des informations sur vos produits de la mer frais.\n\n" +
+          "Nom : " + name + "\n" +
+          "Entreprise : " + (company || "Non précisée") + "\n" +
+          "E-mail : " + email + "\n" +
+          "Téléphone : " + (phone || "Non précisé") + "\n" +
+          "Produit recherché : " + product + "\n" +
+          "Quantité souhaitée : " + (quantity || "Non précisée") + "\n" +
+          "Destination : " + (destination || "Non précisée") + "\n\n" +
+          "Message : " + message;
+
+        const whatsappURL =
+          "https://wa.me/221772216774?text=" +
+          encodeURIComponent(whatsappMessage);
+
+        status.textContent =
+          "Ouverture de WhatsApp avec votre demande...";
+
+        window.open(whatsappURL, "_blank", "noopener");
+      }
+    );
+  </script>
+
+</body>
+</html>
